@@ -1,0 +1,27 @@
+/* Backdrop layers owned by ui-personalize. Both pseudo elements are fixed to
+ * the viewport behind every surface and hold no pointer events, so the shell
+ * stays interactive. The image layer carries the blur and is scaled up with it
+ * so blurred edges never bleed into the viewport corners. The scrim layer is
+ * painted after it and dims whatever the user picked. */
+html[data-dsh-personalize='on']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--dsh-pz-bg-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(var(--dsh-pz-bg-blur, 0px));
+  transform: scale(var(--dsh-pz-bg-scale, 1));
+}
+
+html[data-dsh-personalize='on']::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--dsh-pz-bg-dim, transparent);
+}

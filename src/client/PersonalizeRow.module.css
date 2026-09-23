@@ -1,0 +1,215 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 28px;
+}
+
+.label {
+  flex: 0 0 84px;
+  font-size: 13px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.swatch {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s var(--ds-ease-in-out);
+}
+
+.swatch:hover {
+  transform: scale(1.12);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  width: 56px;
+  height: 30px;
+  padding: 0;
+  font-size: 11px;
+  color: var(--dsw-alias-label-secondary);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 8px;
+  background-color: var(--dsw-alias-bg-layer-2);
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Typeface chips: wider than the backdrop chips, and each one previews its own face. */
+.fontChip {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 8px;
+  background-color: var(--dsw-alias-bg-layer-2);
+  cursor: pointer;
+}
+
+.fontChip:hover {
+  background-color: var(--dsw-alias-bg-layer-1);
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.selected {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: 2px;
+}
+
+.fileRow {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+}
+
+.hiddenFile {
+  display: none;
+}
+
+.button {
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  background-color: var(--dsw-alias-bg-layer-1);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--dsw-alias-bg-layer-2);
+}
+
+.textInput {
+  flex: 1;
+  min-width: 120px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  background-color: var(--dsw-alias-bg-layer-1);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 6px;
+  outline: none;
+}
+
+.slider {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+}
+
+.range {
+  flex: 1;
+  max-width: 200px;
+  accent-color: var(--dsw-alias-brand-primary);
+}
+
+.value {
+  min-width: 44px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+/* Installed-font picker: the panel floats under its toggle inside the row. */
+.pickerWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.pickerPanel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 240px;
+  max-width: 60vw;
+  padding: 8px;
+  background-color: var(--dsw-alias-bg-layer-1);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+}
+
+.pickerSearch {
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  background-color: var(--dsw-alias-bg-base);
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 6px;
+  outline: none;
+}
+
+.pickerList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+  max-height: 220px;
+}
+
+.pickerItem {
+  padding: 5px 8px;
+  font-size: 13px;
+  color: var(--dsw-alias-label-primary);
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pickerItem:hover {
+  background-color: var(--dsw-alias-bg-layer-2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--dsw-alias-label-secondary);
+}
